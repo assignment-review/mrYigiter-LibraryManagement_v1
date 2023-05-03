@@ -6,19 +6,17 @@ Sprin Boot ile PostgreSQL e  JDBC ile bağlantı kurularak hazırlanmıştır
 	    Aşamalar
 	1- Yeni Spring Boot Project sekmesinden gerekli kutuphaneleri ekleyerek bir proje oluşturdum.
 	        Maven Kütüphaler :
-	            -data-jpa
-	            -validation
-	            -starter-web
-	            -devtools
-	            -postgresql
-	            -lombok
-	            -starter-jdbc
-	            -webmvc-ui
+	            -data-jpa, -validation, -starter-web, -devtools, -postgresql, -lombok, -starter-jdbc, -webmvc-ui
+		    
 	2- Application.yml dosyasında port, database ayarlamalarımı yaptım
 	            -DB name: library_management_v1_db
 	            -username: db_user
-                -password: db_password
+                    -password: db_password
 	3- İstenilen Entity Classları de DTO classlarını oluşturdum.
+			
+			
+			
+	
 	        -DTO class ile DB deki fieldları client tarafına geçirmemek
 	        -Mapping işlemi ile kayıt işlemleri oldu (MapStruct) kutuphanesini eklemedim
 	4- Management Classında yapılması istenen methodları Controller package(BookController, BorrowerController) ile ayrı olarak yaptım.
