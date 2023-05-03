@@ -4,6 +4,7 @@ import com.yigiter.librarymanagement.dto.BookDTO;
 import com.yigiter.librarymanagement.service.BookService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import jakarta.validation.Valid;
@@ -29,7 +30,8 @@ public class BookController {
 
     @DeleteMapping("/{title}")
     public ResponseEntity<String> removeBook(@PathVariable String title){
-        String message=bookService.removeBook(title);
+        bookService.removeBook(title);
+        String message="Book deleted successfully";
         return ResponseEntity.ok(message);
     }
 

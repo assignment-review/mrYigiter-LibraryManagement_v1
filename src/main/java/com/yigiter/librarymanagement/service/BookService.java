@@ -35,7 +35,7 @@ public class BookService {
     public BookDTO getBook(String isbn) {
         Book book= getBookByIsbn(isbn);
             if (book==null){
-                throw new RuntimeException("Not found Book");
+                throw new RuntimeException("Book not found");
             }
             return bookToBookDTO(book);
     }
@@ -44,9 +44,9 @@ public class BookService {
         Book book= getBookByTitle(title);
             if (book!=null){
                 jdbcTemplate.update("DELETE FROM tbl_books WHERE title='"+title+"'");
-                return "book deleted successfully";
+                return "Book deleted successfully";
             }else {
-                throw new RuntimeException("Not found Book");
+                throw new RuntimeException("Book not found");
             }
     }
 

@@ -16,6 +16,7 @@ import jakarta.validation.constraints.Pattern;
 public class BorrowerDTO {
 
   //  private Long id;
+
   @NotNull(message = "Please provide name")
   private String name;
   @Email  // email e valid işlemi yapar format kontrolu
