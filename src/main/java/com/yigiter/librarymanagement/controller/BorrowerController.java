@@ -28,7 +28,8 @@ public class BorrowerController {
     }
     @DeleteMapping("/{email}")
     public ResponseEntity<String> removeBorrower(@PathVariable String email){
-        String message =borrowerService.removeBorrower(email);
+        borrowerService.removeBorrower(email);
+        String message ="Borrower deleted successfully ";
         return ResponseEntity.ok(message);
     }
 
