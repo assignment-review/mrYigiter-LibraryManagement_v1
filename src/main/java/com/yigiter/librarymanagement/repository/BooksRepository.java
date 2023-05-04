@@ -19,11 +19,11 @@ public class BooksRepository {
     }
 
     public void removeBook(String title){
-        jdbcTemplate.update("DELETE FROM tbl_books WHERE title='"+title+"'");
+        jdbcTemplate.execute("DELETE FROM tbl_books WHERE title='"+title+"'");
     }
 
     public void borrowReturnBook(String title, int availableCopies){
-        jdbcTemplate.update("UPDATE tbl_books SET available_copies ="+availableCopies+ " WHERE title='"+title+"'");
+        jdbcTemplate.execute("UPDATE tbl_books SET available_copies ="+availableCopies+ " WHERE title='"+title+"'");
     }
 
     public Book getBookByIsbn(String isbn) {
